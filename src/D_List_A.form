@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="D_List_A">
+  <grid id="27dc6" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="1338" height="827"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <grid id="9654c" binding="List" layout-manager="GridLayoutManager" row-count="6" column-count="7" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-15267264"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="e4269" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="5" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-15725776"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="e9b2b" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <autoscrolls value="false"/>
+                  <background color="-16777216"/>
+                  <doubleBuffered value="false"/>
+                  <enabled value="true"/>
+                  <font name="Manchester City UCL 23-24 Inlin" size="48"/>
+                  <foreground color="-1"/>
+                  <preferredSize width="350" height="80"/>
+                  <text value="ANTIHÉROES REGISTRADOS"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <component id="2e1a5" class="javax.swing.JButton" binding="AÑADIRANTIHÉROEButton" default-binding="true">
+            <constraints>
+              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="532" height="63"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-6291712"/>
+              <borderPainted value="false"/>
+              <contentAreaFilled value="true"/>
+              <enabled value="true"/>
+              <focusPainted value="false"/>
+              <font name="Manchester City UCL 23-24 Inlin" size="48"/>
+              <foreground color="-1"/>
+              <opaque value="true"/>
+              <text value="AÑADIR ANTIHÉROE"/>
+            </properties>
+          </component>
+          <component id="d2fdd" class="javax.swing.JButton" binding="ELIMINARANTIHÉROEButton" default-binding="true">
+            <constraints>
+              <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="280" height="63"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-11168283"/>
+              <borderPainted value="false"/>
+              <focusPainted value="false"/>
+              <font name="Manchester City UCL 23-24 Inlin" size="48"/>
+              <foreground color="-1"/>
+              <text value="ELIMINAR ANTIHÉROE"/>
+            </properties>
+          </component>
+          <component id="1b5db" class="javax.swing.JButton" binding="DEVOLVERSEButton" default-binding="true">
+            <constraints>
+              <grid row="2" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="215" height="63"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-16777216"/>
+              <borderPainted value="false"/>
+              <focusPainted value="false"/>
+              <font name="Manchester City UCL 23-24 Inlin" size="48"/>
+              <foreground color="-1"/>
+              <text value="DEVOLVERSE"/>
+            </properties>
+          </component>
+          <component id="ab8f7" class="javax.swing.JButton" binding="SALIRButton" default-binding="true">
+            <constraints>
+              <grid row="4" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-5762299"/>
+              <borderPainted value="false"/>
+              <focusPainted value="false"/>
+              <font name="Manchester City UCL 23-24 Inlin" size="48"/>
+              <foreground color="-1"/>
+              <text value="SALIR"/>
+            </properties>
+          </component>
+          <grid id="b7af9" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="5" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="24" height="929"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-15267264"/>
+              <foreground color="-15267264"/>
+            </properties>
+            <border type="none"/>
+            <children/>
+          </grid>
+        </children>
+      </grid>
+      <hspacer id="b2ef9">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+    </children>
+  </grid>
+</form>
