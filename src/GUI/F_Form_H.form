@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="GUI.F_Form_H">
+  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="783" height="752"/>
+    </constraints>
+    <properties>
+      <preferredSize width="809" height="275"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="9a88e" layout-manager="GridLayoutManager" row-count="5" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-15527632"/>
+          <opaque value="true"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="68f79" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="300" height="34"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-1"/>
+              <caretColor color="-1"/>
+              <font name="Manchester City UCL 23-24 Inlin" size="20"/>
+              <foreground color="-1"/>
+              <opaque value="false"/>
+              <selectionColor color="-16777216"/>
+            </properties>
+          </component>
+          <component id="570cd" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="148" height="17"/>
+              </grid>
+            </constraints>
+            <properties>
+              <font name="Manchester City UCL 23-24 Inlin" size="26"/>
+              <foreground color="-1"/>
+              <text value="Nombre:"/>
+            </properties>
+          </component>
+          <component id="8719" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="148" height="17"/>
+              </grid>
+            </constraints>
+            <properties>
+              <font name="Manchester City UCL 23-24 Inlin" size="26"/>
+              <foreground color="-1"/>
+              <text value="Nivel de fuerza:"/>
+            </properties>
+          </component>
+          <component id="be551" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="148" height="17"/>
+              </grid>
+            </constraints>
+            <properties>
+              <font name="Manchester City UCL 23-24 Inlin" size="26"/>
+              <foreground color="-1"/>
+              <text value="Tipo:"/>
+            </properties>
+          </component>
+          <component id="51e38" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="500" height="76"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-15527632"/>
+              <font name="Manchester City UCL 23-24 Inlin" size="48"/>
+              <foreground color="-1"/>
+              <text value="INFORMACIÓN PODER"/>
+            </properties>
+          </component>
+          <component id="fa0d5" class="javax.swing.JButton" binding="SIGUIENTEButton" default-binding="true">
+            <constraints>
+              <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-10379467"/>
+              <borderPainted value="false"/>
+              <focusPainted value="false"/>
+              <font name="Manchester City UCL 23-24 Inlin" size="24"/>
+              <foreground color="-1"/>
+              <text value="SIGUIENTE"/>
+            </properties>
+          </component>
+          <component id="22598" class="javax.swing.JButton" binding="VOLVERButton">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-5110012"/>
+              <borderPainted value="false"/>
+              <focusPainted value="false"/>
+              <font name="Manchester City UCL 23-24 Inlin" size="24"/>
+              <foreground color="-1"/>
+              <text value="VOLVER"/>
+            </properties>
+          </component>
+          <component id="73da8" class="javax.swing.JComboBox" binding="comboBox1" default-binding="true">
+            <constraints>
+              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-15527632"/>
+              <focusable value="false"/>
+              <font name="Manchester City UCL 23-24 Inlin" size="20"/>
+              <foreground color="-1"/>
+              <lightWeightPopupEnabled value="true"/>
+              <model>
+                <item value="-"/>
+                <item value="1"/>
+                <item value="2"/>
+                <item value="3"/>
+                <item value="4"/>
+                <item value="5"/>
+                <item value="6"/>
+                <item value="7"/>
+                <item value="8"/>
+                <item value="9"/>
+                <item value="10"/>
+              </model>
+              <opaque value="false"/>
+              <toolTipText value=""/>
+            </properties>
+          </component>
+          <component id="8b42a" class="javax.swing.JComboBox" binding="comboBox2" default-binding="true">
+            <constraints>
+              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-15527632"/>
+              <focusable value="false"/>
+              <font name="Manchester City UCL 23-24 Inlin" size="20"/>
+              <foreground color="-1"/>
+              <model>
+                <item value="-"/>
+                <item value="Fisico"/>
+                <item value="Mental"/>
+                <item value="Sobrenatural"/>
+                <item value="Tecnologico"/>
+              </model>
+              <opaque value="true"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>

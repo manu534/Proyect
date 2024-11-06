@@ -1,3 +1,5 @@
+package GUI;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -9,6 +11,7 @@ public class A_Screen extends JFrame {
     private int progressValue = 0;
 
     public A_Screen() {
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
         setContentPane(marvel_picture);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(2560,1440);
