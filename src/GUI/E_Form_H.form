@@ -66,6 +66,7 @@
         <properties>
           <background color="-10379467"/>
           <borderPainted value="false"/>
+          <enabled value="true"/>
           <focusPainted value="false"/>
           <font name="Manchester City UCL 23-24 Inlin" size="24"/>
           <foreground color="-1"/>
@@ -85,6 +86,7 @@
           <foreground color="-1"/>
           <opaque value="false"/>
           <selectionColor color="-16777216"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="df7d" class="javax.swing.JTextField" binding="txtAge_H">

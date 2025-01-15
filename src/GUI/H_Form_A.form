@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="GUI.G_Form_A">
-  <grid id="27dc6" binding="Form" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="GUI.H_Form_A">
+  <grid id="27dc6" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="806" height="722"/>
+      <xy x="20" y="20" width="911" height="659"/>
     </constraints>
     <properties/>
     <border type="none"/>
     <children>
-      <grid id="b9cb4" layout-manager="GridLayoutManager" row-count="6" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="a3031" binding="form" layout-manager="GridLayoutManager" row-count="5" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -18,7 +18,7 @@
         </properties>
         <border type="none"/>
         <children>
-          <component id="67573" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+          <component id="c7a67" class="javax.swing.JTextField" binding="textField1" default-binding="true">
             <constraints>
               <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="300" height="34"/>
@@ -33,7 +33,7 @@
               <selectionColor color="-16777216"/>
             </properties>
           </component>
-          <component id="48e84" class="javax.swing.JTextField" binding="textField2" default-binding="true">
+          <component id="794d7" class="javax.swing.JTextField" binding="textField2" default-binding="true">
             <constraints>
               <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="300" height="34"/>
@@ -47,7 +47,7 @@
               <opaque value="false"/>
             </properties>
           </component>
-          <component id="800" class="javax.swing.JTextField" binding="textField3" default-binding="true">
+          <component id="2ab6e" class="javax.swing.JTextField" binding="textField3" default-binding="true">
             <constraints>
               <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="300" height="34"/>
@@ -61,7 +61,7 @@
               <opaque value="false"/>
             </properties>
           </component>
-          <component id="d82e1" class="javax.swing.JLabel">
+          <component id="84af6" class="javax.swing.JLabel">
             <constraints>
               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
                 <preferred-size width="148" height="17"/>
@@ -70,10 +70,10 @@
             <properties>
               <font name="Manchester City UCL 23-24 Inlin" size="26"/>
               <foreground color="-1"/>
-              <text value="Nombre:"/>
+              <text value="Personaje:"/>
             </properties>
           </component>
-          <component id="ceac7" class="javax.swing.JLabel">
+          <component id="47008" class="javax.swing.JLabel">
             <constraints>
               <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
                 <preferred-size width="148" height="17"/>
@@ -82,10 +82,10 @@
             <properties>
               <font name="Manchester City UCL 23-24 Inlin" size="26"/>
               <foreground color="-1"/>
-              <text value="Año de nacimiento:"/>
+              <text value="Año Pelicula:"/>
             </properties>
           </component>
-          <component id="dcb68" class="javax.swing.JLabel">
+          <component id="45e5d" class="javax.swing.JLabel">
             <constraints>
               <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
                 <preferred-size width="148" height="17"/>
@@ -94,38 +94,12 @@
             <properties>
               <font name="Manchester City UCL 23-24 Inlin" size="26"/>
               <foreground color="-1"/>
-              <text value="País:"/>
+              <text value="Nombre Pelicula:"/>
             </properties>
           </component>
-          <component id="ded39" class="javax.swing.JLabel">
+          <component id="42b79" class="javax.swing.JButton" binding="VOLVERButton">
             <constraints>
-              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                <preferred-size width="148" height="17"/>
-              </grid>
-            </constraints>
-            <properties>
-              <font name="Manchester City UCL 23-24 Inlin" size="26"/>
-              <foreground color="-1"/>
-              <text value="Estatura:"/>
-            </properties>
-          </component>
-          <component id="75bd1" class="javax.swing.JTextField" binding="textField4">
-            <constraints>
-              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="300" height="34"/>
-              </grid>
-            </constraints>
-            <properties>
-              <background color="-1"/>
-              <caretColor color="-1"/>
-              <font name="Manchester City UCL 23-24 Inlin" size="20"/>
-              <foreground color="-1"/>
-              <opaque value="false"/>
-            </properties>
-          </component>
-          <component id="8e5b8" class="javax.swing.JButton" binding="VOLVERButton">
-            <constraints>
-              <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="1" use-parent-layout="false"/>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="1" use-parent-layout="false"/>
             </constraints>
             <properties>
               <background color="-5110012"/>
@@ -136,7 +110,7 @@
               <text value="VOLVER"/>
             </properties>
           </component>
-          <component id="d0fc1" class="javax.swing.JLabel">
+          <component id="4738c" class="javax.swing.JLabel">
             <constraints>
               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
                 <preferred-size width="500" height="76"/>
@@ -146,12 +120,12 @@
               <background color="-15527632"/>
               <font name="Manchester City UCL 23-24 Inlin" size="48"/>
               <foreground color="-1"/>
-              <text value="INFORMACIÓN ACTOR"/>
+              <text value="Papel Pelicula"/>
             </properties>
           </component>
-          <component id="3aeb1" class="javax.swing.JButton" binding="SIGUIENTEButton">
+          <component id="cce5f" class="javax.swing.JButton" binding="SIGUIENTEButton">
             <constraints>
-              <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="1" use-parent-layout="false"/>
+              <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="1" use-parent-layout="false"/>
             </constraints>
             <properties>
               <background color="-10379467"/>
@@ -159,7 +133,7 @@
               <focusPainted value="false"/>
               <font name="Manchester City UCL 23-24 Inlin" size="24"/>
               <foreground color="-1"/>
-              <text value="SIGUIENTE"/>
+              <text value="Finaliizar"/>
             </properties>
           </component>
         </children>

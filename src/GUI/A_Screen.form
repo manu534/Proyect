@@ -61,6 +61,7 @@
         </constraints>
         <properties>
           <background color="-16777216"/>
+          <font name="Manchester City UCL 23-24 Inlin"/>
           <icon value="Picture.jpg"/>
           <text value=""/>
         </properties>

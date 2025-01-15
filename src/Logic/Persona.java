@@ -4,16 +4,17 @@ public class Persona {
     protected String nombre;
     protected int edad;
     protected String pais;
-    protected int estatura;
+    protected double estatura;
 
     public Persona() {}
-    public Persona(String nombre, int edad, String pais, int estatura) {}
+    public Persona(String nombre, int edad, String pais, double estatura) {}
 
-    public int getEstatura() {
+
+    public double getEstatura() {
         return estatura;
     }
 
-    public void setEstatura(int estatura) {
+    public void setEstatura(double estatura) {
         this.estatura = estatura;
     }
 

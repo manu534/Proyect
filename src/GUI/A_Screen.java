@@ -16,19 +16,18 @@ public class A_Screen extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(2560,1440);
         setLocationRelativeTo(null);
-        int duration = 5000; // 7 segundos en milisegundos
+        int duration = 5000;
         int steps = 100;
         int stepTime = duration / steps;
-        timer = new Timer(stepTime, new ActionListener() {
+        timer = new Timer(stepTime, new ActionListener()
+        {
             @Override
             public void actionPerformed(ActionEvent e) {
                 progressBar1.setValue(progressValue);
                 progressValue++;
 
                 if (progressValue > 100) {
-                    timer.stop(); // Detener el temporizador cuando llegue al 100%
-
-                    // Abrir la siguiente ventana y cerrar la actual
+                    timer.stop();
                     B_Introduce second = new B_Introduce();
                     second.setVisible(true);
                     dispose();
@@ -36,7 +35,6 @@ public class A_Screen extends JFrame {
             }
         });
 
-        timer.start(); // Iniciar el Timer
-
+        timer.start();
     }
 }

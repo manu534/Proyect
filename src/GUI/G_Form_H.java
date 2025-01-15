@@ -17,14 +17,18 @@ public class G_Form_H extends JFrame {
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setContentPane(Form);
-        F_Form_H form = new F_Form_H();
+
         VOLVERButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                F_Form_H form = new F_Form_H();
                 form.setVisible(true);
                 dispose();
             }
         });
 
+
     }
+
+
 }

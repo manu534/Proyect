@@ -13,6 +13,9 @@ public class Actor extends Persona{
         super(nombre,edad,pais,estatura);
     }
 
+    public <E> Actor(String nombre, int edad, String pais, double estatura, int i, ArrayList<E> es, Poder poder, String descripcion, String frase) {
+    }
+
     public int getAn_osExperencia() {
         return an_osExperencia;
     }

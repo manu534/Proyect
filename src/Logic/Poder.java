@@ -1,6 +1,6 @@
 package Logic;
 
-public class Poder extends Personaje {
+public class Poder  {
     protected String nombre;
     protected int level;
     protected String tipo;
@@ -10,11 +10,27 @@ public class Poder extends Personaje {
         this.level = level;
         this.tipo = tipo;
     }
-    enum tipo {
+    public enum Tipo {
         Fisico,
         Mental,
         Sobrenatural,
         Tecnologico,
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
     }
 
     public String getTipo() {
