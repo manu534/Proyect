@@ -8,11 +8,10 @@ import java.awt.event.ActionListener;
 
 public class E_Form_H extends JFrame {
     private JTextField txtName_H;
-    private JTextField txtAge_H;
     private JTextField txtDescription_H;
-    private JTextField txt_sentence_H;
     private JButton SIGUIENTEButton;
     private JPanel Form;
+    private JComboBox comboBox1;
 
     public E_Form_H() {
         setSize(900, 500);

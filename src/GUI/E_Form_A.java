@@ -1,56 +1,72 @@
 package GUI;
 
 import Logic.AntiHeroe;
+import Logic.GestorPersonajes;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.Color;
+import java.util.Arrays;
+import java.util.List;
 
 public class E_Form_A extends JFrame {
+
+    //Atributos
+
     private JTextField txtName_A;
-    private JTextField txtAge_A;
+    private JTextField txtFrase_A;
+    private JTextField txt_Metodos_A;
     private JButton SIGUIENTEButton;
-    private JTextField txtDescription_A;
-    private JTextField txt_sentence_A;
     private JPanel Form;
-    public E_Form_A() {
-        this(null);
-    }
-    public E_Form_A(AntiHeroe antiHeroe) {
+    private JSpinner Edad_Jspiner;
+    private JTextField Alias;
+    GestorPersonajes gestorPersonajes;
+     AntiHeroe antiheroe;
+
+
+    public E_Form_A(GestorPersonajes gestorPersonajes,AntiHeroe antiHeroe) {
+        this.antiheroe = antiHeroe;
+        this.gestorPersonajes = gestorPersonajes;
         setSize(800, 500);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setContentPane(Form);
-        if (antiHeroe != null)
-        {
-            txtName_A.setText(antiHeroe.getName());
-            txtAge_A.setText(String.valueOf(antiHeroe.getAge()));
-            txtDescription_A.setText(antiHeroe.getDescripcion());
-            txt_sentence_A.setText(antiHeroe.getFrase());
-        }
         SIGUIENTEButton.addActionListener(new ActionListener()
         {
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                String name = txtName_A.getText();
-                String ageStr = txtAge_A.getText();
-                String descripcion = txtDescription_A.getText();
-                String frase = txt_sentence_A.getText();
-                if (name.isEmpty() || ageStr.isEmpty() || descripcion.isEmpty() || frase.isEmpty()) {
-                    JOptionPane.showMessageDialog(E_Form_A.this, "Por favor, complete todos los campos.", "Error", JOptionPane.ERROR_MESSAGE);
-                    return;
-                }
                 try {
-                    int age = Integer.parseInt(ageStr);
+                    // Capturar datos
 
-                    AntiHeroe antiHeroe = new AntiHeroe(name, age, descripcion, frase);
-                    F_Form_A form = new F_Form_A(antiHeroe);
+                    String alias = Alias.getText();
+                    String frase = txtFrase_A.getText();
+                    int edad = (int) Edad_Jspiner.getValue();
+                    String metodosStr = txt_Metodos_A.getText();
+                    List<String> metodosCuestionables = Arrays.asList(metodosStr.split(";"));
+                    String nombreReal = txtName_A.getText();
+
+                    // Validar datos
+
+                    if (alias.isEmpty() || frase.isEmpty() || metodosCuestionables.isEmpty() || nombreReal.isEmpty()) {
+                        JOptionPane.showMessageDialog(null, "Por favor, complete todos los campos.");
+                        return;
+                    }
+
+                    // Crear AntiHeroe
+
+                    AntiHeroe antiheroeTemp = new AntiHeroe(gestorPersonajes.generarId(),"",0,"",alias,nombreReal,edad,frase);
+
+                    antiheroeTemp.setMetodosCuestionables(metodosCuestionables);
+
+                    //Siguiente ventana
+
+                    F_Form_A form = new F_Form_A(gestorPersonajes, antiheroeTemp);
                     form.setVisible(true);
                     dispose();
-                } catch (NumberFormatException ex) {
-                    JOptionPane.showMessageDialog(E_Form_A.this, "La edad debe ser un número entero.", "Error", JOptionPane.ERROR_MESSAGE);
+
+                } catch (Exception ex) {
+                    JOptionPane.showMessageDialog(null, "Error al procesar los datos: " + ex.getMessage());
                 }
             }
         });

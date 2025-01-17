@@ -1,21 +1,29 @@
 package Logic;
 
+
 public class Heroe extends Personaje {
 
-    protected String descripcion;
-    protected String frase;
+    // Atributos
 
-    public Heroe(String name, int age, String descripcion, String frase) {
-        super(name, age);
-        this.descripcion = descripcion;
+    private int nivelHeroismo;
+    private String frase;
+
+    // Constructor
+
+    public Heroe(int id, String nombre, int edad, String nacionalidad, String alias,String nombreReal,int edadPersonaje, int nivelHeroismo,String frase) {
+        super(id, nombre, edad, nacionalidad, alias,nombreReal,edadPersonaje);
+        this.nivelHeroismo = nivelHeroismo;
         this.frase = frase;
     }
-    public String getDescripcion() {
-        return descripcion;
+
+    // Getters y setters
+
+    public int getNivelHeroismo() {
+        return nivelHeroismo;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setNivelHeroismo(int nivelHeroismo) {
+        this.nivelHeroismo = nivelHeroismo;
     }
 
     public String getFrase() {

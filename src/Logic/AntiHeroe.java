@@ -1,47 +1,27 @@
 package Logic;
 
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class AntiHeroe extends Personaje {
-    protected String descripcion;
-    protected String frase;
-    private Poder poder;
-    private Actor actor;
 
-    public AntiHeroe(String name, int age, String descripcion, String frase) {
-        super(name, age);
-        this.descripcion = descripcion;
+    // Atributos
+
+    private String frase;
+    private List<String> metodosCuestionables;
+
+
+    // Constructor
+
+    public AntiHeroe(int id, String nombre, int edad, String nacionalidad, String alias,String nombreReal,int edadPersonaje,String frase ) {
+        super(id, nombre, edad, nacionalidad, alias,nombreReal,edadPersonaje);
         this.frase = frase;
-        this.poder = new Poder("", 0, "");
+        this.metodosCuestionables = new ArrayList<>();
     }
 
-    public AntiHeroe(String name, int age, String descripcion, String frase,Poder poder) {
-        super(name, age);
-        this.descripcion = descripcion;
-        this.frase = frase;
-        this.poder = poder;
-    }
-    public Actor getActor() {
-        return actor;
-    }
 
-    public void setActor(Actor actor) {
-        this.actor = actor;
-    }
-
-    public Poder getPoder() {
-        return poder;
-    }
-
-    public void setPoder(Poder poder) {
-        this.poder = poder;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
+    // Getters y setters
 
     public String getFrase() {
         return frase;
@@ -50,4 +30,18 @@ public class AntiHeroe extends Personaje {
     public void setFrase(String frase) {
         this.frase = frase;
     }
+
+    public List<String> getMetodosCuestionables() {
+        return metodosCuestionables;
+    }
+
+    public void setMetodosCuestionables(List<String> metodosCuestionables) {
+        this.metodosCuestionables = metodosCuestionables;
+    }
+
+    public void agregarMetodoCuestionable(String metodo) {
+        this.metodosCuestionables.add(metodo);
+    }
+
+
 }

@@ -6,11 +6,12 @@ import java.awt.event.ActionListener;
 
 public class F_Form_H extends JFrame {
     private JPanel panel1;
-    private JTextField textField1;
+    private JTextField txt_nombre;
     private JButton SIGUIENTEButton;
     private JButton VOLVERButton;
-    private JComboBox comboBox1;
-    private JComboBox comboBox2;
+    private JComboBox combobox_Nivel;
+    private JComboBox comobobox_Tipo;
+    private JTextField txt_Decripcion;
 
     public F_Form_H() {
         setSize(900, 500);

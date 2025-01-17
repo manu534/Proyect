@@ -1,43 +1,65 @@
 package Logic;
 
-public class Poder  {
-    protected String nombre;
-    protected int level;
-    protected String tipo;
+public class Poder {
 
-    public Poder(String nombre, int level, String tipo) {
-        this.nombre = nombre;
-        this.level = level;
-        this.tipo = tipo;
-    }
+    //Atributos
+
+    private String poder;
+    private int nivel;
+    private Tipo tipo;
+    private String descripcion;
+
+    //Constructor
+
     public enum Tipo {
-        Fisico,
-        Mental,
-        Sobrenatural,
-        Tecnologico,
+        Fisico("Fuerza, velocidad, resistencia"),
+        Mental("Telepatía, telequinesis"),
+        Energetico("Control de elementos, proyección de energía"),
+        Magico("Hechizos, conjuros"),
+        Mutacion("Garras, alas, sentidos agudizados"),
+        Tecnologico("Armadura, armas de energía"),;
+        private String ejemplos;
+
+        Tipo(String ejemplos) {
+            this.ejemplos = ejemplos;
+        }
+
+        public String getEjemplos() {
+            return ejemplos;
+        }
     }
 
-    public int getLevel() {
-        return level;
+    // Getters y setters
+
+    public String getPoder() {
+        return poder;
     }
 
-    public String getNombre() {
-        return nombre;
+    public void setPoder(String poder) {
+        this.poder = poder;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public int getNivel() {
+        return nivel;
     }
 
-    public void setLevel(int level) {
-        this.level = level;
+    public void setNivel(int nivel) {
+        this.nivel = nivel;
     }
 
-    public String getTipo() {
+    public Tipo getTipo() {
         return tipo;
     }
 
-    public void setTipo(String tipo) {
+    public void setTipo(Tipo tipo) {
         this.tipo = tipo;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 }

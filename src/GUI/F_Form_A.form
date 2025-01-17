@@ -3,12 +3,12 @@
   <grid id="27dc6" binding="Form" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="783" height="710"/>
+      <xy x="20" y="20" width="925" height="710"/>
     </constraints>
     <properties/>
     <border type="none"/>
     <children>
-      <grid id="5ee4e" layout-manager="GridLayoutManager" row-count="5" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="5ee4e" layout-manager="GridLayoutManager" row-count="7" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -19,9 +19,9 @@
         </properties>
         <border type="none"/>
         <children>
-          <component id="6cc23" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+          <component id="6cc23" class="javax.swing.JTextField" binding="txt_nombre">
             <constraints>
-              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+              <grid row="1" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="300" height="34"/>
               </grid>
             </constraints>
@@ -70,22 +70,9 @@
               <text value="Tipo:"/>
             </properties>
           </component>
-          <component id="ed7bf" class="javax.swing.JLabel">
-            <constraints>
-              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
-                <preferred-size width="500" height="76"/>
-              </grid>
-            </constraints>
-            <properties>
-              <background color="-15527632"/>
-              <font name="Manchester City UCL 23-24 Inlin" size="48"/>
-              <foreground color="-1"/>
-              <text value="INFORMACIÓN PODER"/>
-            </properties>
-          </component>
           <component id="3bf28" class="javax.swing.JButton" binding="SIGUIENTEButton" default-binding="true">
             <constraints>
-              <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="5" column="4" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <background color="-10379467"/>
@@ -98,7 +85,7 @@
           </component>
           <component id="d36fe" class="javax.swing.JButton" binding="VOLVERButton">
             <constraints>
-              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="5" column="0" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <background color="-5110012"/>
@@ -109,9 +96,9 @@
               <text value="VOLVER"/>
             </properties>
           </component>
-          <component id="1858a" class="javax.swing.JComboBox" binding="comboBox1" default-binding="true">
+          <component id="1858a" class="javax.swing.JComboBox" binding="combobox_Nivel">
             <constraints>
-              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="2" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <background color="-15527632"/>
@@ -136,9 +123,9 @@
               <toolTipText value=""/>
             </properties>
           </component>
-          <component id="86553" class="javax.swing.JComboBox" binding="comboBox2" default-binding="true">
+          <component id="86553" class="javax.swing.JComboBox" binding="comobobox_Tipo">
             <constraints>
-              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="3" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <background color="-15527632"/>
@@ -149,12 +136,72 @@
                 <item value="-"/>
                 <item value="Fisico"/>
                 <item value="Mental"/>
-                <item value="Sobrenatural"/>
+                <item value="Energetico"/>
+                <item value="Magico"/>
+                <item value="Mutacion"/>
                 <item value="Tecnologico"/>
               </model>
               <opaque value="true"/>
             </properties>
           </component>
+          <component id="7ebc4" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="148" height="17"/>
+              </grid>
+            </constraints>
+            <properties>
+              <font name="Manchester City UCL 23-24 Inlin" size="26"/>
+              <foreground color="-1"/>
+              <text value="Descripción:"/>
+            </properties>
+          </component>
+          <component id="e9d37" class="javax.swing.JTextField" binding="txt_Decripcion">
+            <constraints>
+              <grid row="4" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="300" height="34"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-1"/>
+              <caretColor color="-1"/>
+              <font name="Manchester City UCL 23-24 Inlin" size="20"/>
+              <foreground color="-1"/>
+              <opaque value="false"/>
+              <selectionColor color="-16777216"/>
+            </properties>
+          </component>
+          <component id="ed7bf" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="500" height="76"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-15527632"/>
+              <font name="Manchester City UCL 23-24 Inlin" size="48"/>
+              <foreground color="-1"/>
+              <text value="INFORMACIÓN PODER"/>
+            </properties>
+          </component>
+          <component id="1c3f1" class="javax.swing.JButton" binding="añadirPoderButton" default-binding="true">
+            <constraints>
+              <grid row="5" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-13350497"/>
+              <borderPainted value="false"/>
+              <focusPainted value="false"/>
+              <font name="Manchester City UCL 23-24 Inlin" size="24"/>
+              <foreground color="-1"/>
+              <text value="Añadir Poder"/>
+            </properties>
+          </component>
+          <hspacer id="11a50">
+            <constraints>
+              <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
         </children>
       </grid>
     </children>
