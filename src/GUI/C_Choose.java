@@ -1,5 +1,7 @@
 package GUI;
 
+import Logic.GestorPersonajes;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,6 +17,7 @@ public class C_Choose extends JFrame {
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setContentPane(panel1);
+        GestorPersonajes gestorPersonajes = new GestorPersonajes();
         HÉROESButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -26,7 +29,7 @@ public class C_Choose extends JFrame {
         ANTIHÉROESButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                D_List_A second = new D_List_A();
+                D_List_A second = new D_List_A(gestorPersonajes);
                 second.setVisible(true);
                 dispose();
             }

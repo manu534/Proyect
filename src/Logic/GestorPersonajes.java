@@ -11,14 +11,12 @@ public class GestorPersonajes {
     //Atributos
 
     private List<Personaje> personajes;
-    private List<Actor> actores;
     private int siguienteId = 1;
 
     //Constructor
 
     public GestorPersonajes() {
         this.personajes = new ArrayList<>();
-        this.actores = new ArrayList<>();
     }
 
     // Métodos personajes
@@ -72,23 +70,43 @@ public class GestorPersonajes {
 
     public void guardarDatosTXT(String nombreArchivo) {
         try (FileWriter writer = new FileWriter(nombreArchivo)) {
-            // Escribir la información de los personajes
             for (Personaje personaje : personajes) {
-                writer.write("Logic.Personaje: " + personaje.getNombreActor() + "\n");
+
+                writer.write("Personaje: " + personaje.getNombreReal() + "\n");
                 writer.write("  ID: " + personaje.getId() + "\n");
-                // ... (Escribir otros atributos del personaje)
-
-                // Escribir la información de los poderes
-                for (Poder poder : personaje.getPoderes()) {
-                    writer.write("  Logic.Poder: " + poder.getPoder() + "\n");
-                    // ... (Escribir otros atributos del poder)
+                writer.write("  Alias: " + personaje.getNombreActor() + "\n");
+                writer.write("  Edad: " + personaje.getEdad() + "\n");
+                writer.write("  Nacionalidad: " + personaje.getNacionalidad() + "\n");
+                if (personaje instanceof AntiHeroe) {
+                    AntiHeroe antiheroe = (AntiHeroe) personaje;
+                    writer.write("  Frase Célebre: " + antiheroe.getFrase() + "\n");
+                    writer.write("  Métodos Cuestionables: " + String.join(", ", antiheroe.getMetodosCuestionables()) + "\n");
                 }
-            }
+                // Escribir la información de los poderes
 
-            // Escribir la información de los actores
-            for (Actor actor : actores) {
-                writer.write("Logic.Actor: " + actor.getNombreActor() + "\n");
-                // ... (Escribir otros atributos del actor)
+                writer.write("  Poderes:\n");
+                for (Poder poder : personaje.getPoderes()) {
+                    writer.write("    - " + poder.getPoder() + "\n");
+                    writer.write("      Nivel: " + poder.getNivel() + "\n");
+                    writer.write("      Tipo: " + poder.getTipo() + "\n");
+                    writer.write("      Descripción: " + poder.getDescripcion() + "\n");
+                }
+                // Escribir la información del actor
+
+                if (personaje.getActor() != null) {
+                    Actor actor = personaje.getActor();
+                    writer.write("  Actor: " + actor.getNombreActor() + "\n");
+                    writer.write("    Edad: " + actor.getEdad() + "\n");
+                    writer.write("    Nacionalidad: " + actor.getNacionalidad() + "\n");
+                    // Escribir la información de las películas del actor
+                    writer.write("    Películas:\n");
+                    for (Actor.Papel papel : actor.getPeliculas()) {
+                        writer.write("      - " + papel.getTitulo() + "\n");
+                        writer.write("        Año: " + papel.getAnio() + "\n");
+                        writer.write("        Personaje: " + papel.getPersonaje() + "\n");
+                    }
+                }
+                writer.write("\n");
             }
         } catch (IOException e) {
             System.err.println("Error al guardar los datos en el archivo TXT: " + e.getMessage());
@@ -101,17 +119,12 @@ public class GestorPersonajes {
         this.personajes = personajes;
     }
 
-    public void setActores(List<Actor> actores) {
-        this.actores = actores;
-    }
+
 
     public List<Personaje> getPersonajes() {
         return personajes;
     }
 
-    public List<Actor> getActores() {
-        return actores;
-    }
 
     public int getSiguienteId() {
         return siguienteId;
