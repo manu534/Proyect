@@ -42,21 +42,26 @@ public class G_Form_A extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
+
                     // Capturar datos del actor
 
                     String nombreActor = textField1.getText();
-                    int anioNacimiento = Integer.parseInt(textField2.getText());
+
+                    int an_oNacimiento = Integer.parseInt(textField2.getText());
                     String nacionalidad = textField3.getText();
+
 
                     // Validar datos
                     if (nombreActor.isEmpty() || nacionalidad.isEmpty()) {
                         JOptionPane.showMessageDialog(null, "Por favor, complete todos los campos.");
                         return;
                     }
+                    System.out.println(nombreActor);
+                    System.out.println(nacionalidad);
 
                     // Calcular la edad del actor
 
-                    int edadActor = Calendar.getInstance().get(Calendar.YEAR) - anioNacimiento;
+                    int edadActor = Calendar.getInstance().get(Calendar.YEAR) - an_oNacimiento;
 
                     // Crear un nuevo objeto Actor
 
@@ -71,6 +76,7 @@ public class G_Form_A extends JFrame {
 
                     // Asociar el Actor al AntiHeroe
 
+                    antiheroe.setNombreReal(nombreActor);
                     antiheroe.setActor(nuevoActor);
                     antiheroe.setId(gestorPersonajes.generarId());
                     antiheroe.setEdad(edadActor);

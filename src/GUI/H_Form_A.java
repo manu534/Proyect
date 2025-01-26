@@ -1,9 +1,7 @@
 package GUI;
-
 import Logic.Actor;
 import Logic.AntiHeroe;
 import Logic.GestorPersonajes;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -12,7 +10,7 @@ public class H_Form_A extends JFrame {
     private JTextField txt_nombrepelicula;
     private JTextField txt_personaje;
     private JButton VOLVERButton;
-    private JButton SIGUIENTEButton;
+    private JButton GUARDARButton;
     private JPanel form;
     private JTextField txt_aino;
     private JButton añadirPeliculaButton;
@@ -35,10 +33,37 @@ public class H_Form_A extends JFrame {
             }
         });
 
-        SIGUIENTEButton.addActionListener(new ActionListener() {
+        GUARDARButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                // Capturar papel
+                String titulo = txt_nombrepelicula.getText();
+                int anio = Integer.parseInt(txt_aino.getText());
+                String personaje = txt_personaje.getText();
 
+                // Validar datos
+                if (titulo.isEmpty() || personaje.isEmpty()) {
+                    JOptionPane.showMessageDialog(null, "Por favor, complete todos los campos.");
+                    return;
+                }
+
+                // Crear un nuevo objeto
+                Actor.Papel nuevoPapel = new Actor.Papel(titulo, anio, personaje);
+
+                // Agrega el papel al actor
+                antiheroe.getActor().getPeliculas().add(nuevoPapel);
+
+                // Limpiar campos del formulario
+                txt_nombrepelicula.setText("");
+                txt_aino.setText("");
+                txt_personaje.setText("");
+
+                // Guardar los datos
+                gestorPersonajes.guardarDatosTXT("antiheroes.txt");
+
+                D_List_A form = new  D_List_A(gestorPersonajes);
+                form.setVisible(true);
+                dispose();
             }
         });
         añadirPeliculaButton.addActionListener(new ActionListener() {
@@ -58,7 +83,7 @@ public class H_Form_A extends JFrame {
                     return;
                 }
 
-                // Crear un nuevo objeto
+                // Crear un nuevo papel
 
                 Actor.Papel nuevoPapel = new Actor.Papel(titulo, anio, personaje);
 
@@ -66,7 +91,7 @@ public class H_Form_A extends JFrame {
 
                 antiheroe.getActor().getPeliculas().add(nuevoPapel);
 
-                // Limpiar campos del formulario
+                // Limpia el formulario
 
                 txt_nombrepelicula.setText("");
                 txt_aino.setText("");
