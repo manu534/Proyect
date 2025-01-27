@@ -61,7 +61,7 @@ public class H_Form_A extends JFrame {
                 // Guardar los datos
                 gestorPersonajes.guardarDatosTXT("antiheroes.txt");
 
-                D_List_A form = new  D_List_A(gestorPersonajes);
+                F_list_A form = new F_list_A(gestorPersonajes);
                 form.setVisible(true);
                 dispose();
             }

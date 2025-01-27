@@ -29,7 +29,7 @@ public class D_List_A extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setContentPane(Panal);
         tablaAntiheroes = new JTable();
-       /* DefaultTableModel modeloTabla = new DefaultTableModel();
+        DefaultTableModel modeloTabla = new DefaultTableModel();
         modeloTabla.addColumn("ID");
         modeloTabla.addColumn("Alias");
         modeloTabla.addColumn("Nombre Real");
@@ -38,7 +38,7 @@ public class D_List_A extends JFrame {
         // Agregar la tabla a un JScrollPane
         JScrollPane scrollPane = new JScrollPane(tablaAntiheroes);
         Panal.add(scrollPane, BorderLayout.CENTER);
-        actualizarTabla();*/
+        actualizarTabla();
 
         DEVOLVERSEButton.addActionListener(new ActionListener() {
             @Override
@@ -63,7 +63,6 @@ public class D_List_A extends JFrame {
             }
         });
     }
-    /*
     private void actualizarTabla() {
         DefaultTableModel modeloTabla = (DefaultTableModel) tablaAntiheroes.getModel();
         modeloTabla.setRowCount(0); // Limpiar la tabla
@@ -76,6 +75,6 @@ public class D_List_A extends JFrame {
             }
         }
     }
-    */
+
 
 }
