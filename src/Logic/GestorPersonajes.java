@@ -67,7 +67,6 @@ public class GestorPersonajes {
 
     //Txt
 
-
     public void guardarDatosTXT(String nombreArchivo) {
         try (FileWriter writer = new FileWriter(nombreArchivo)) {
             for (Personaje personaje : personajes) {
@@ -119,12 +118,9 @@ public class GestorPersonajes {
         this.personajes = personajes;
     }
 
-
-
     public List<Personaje> getPersonajes() {
         return personajes;
     }
-
 
     public int getSiguienteId() {
         return siguienteId;

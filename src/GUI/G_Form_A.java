@@ -43,15 +43,10 @@ public class G_Form_A extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 try {
 
-                    // Capturar datos del actor
-
                     String nombreActor = textField1.getText();
-
                     int an_oNacimiento = Integer.parseInt(textField2.getText());
                     String nacionalidad = textField3.getText();
 
-
-                    // Validar datos
                     if (nombreActor.isEmpty() || nacionalidad.isEmpty()) {
                         JOptionPane.showMessageDialog(null, "Por favor, complete todos los campos.");
                         return;
@@ -59,11 +54,7 @@ public class G_Form_A extends JFrame {
                     System.out.println(nombreActor);
                     System.out.println(nacionalidad);
 
-                    // Calcular la edad del actor
-
                     int edadActor = Calendar.getInstance().get(Calendar.YEAR) - an_oNacimiento;
-
-                    // Crear un nuevo objeto Actor
 
                     Actor nuevoActor = new Actor(
                             antiHeroe.getId(),
@@ -74,19 +65,17 @@ public class G_Form_A extends JFrame {
 
                     );
 
-                    // Asociar el Actor al AntiHeroe
-
                     antiheroe.setNombreReal(nombreActor);
                     antiheroe.setActor(nuevoActor);
                     antiheroe.setId(gestorPersonajes.generarId());
                     antiheroe.setEdad(edadActor);
                     antiheroe.setNacionalidad(nacionalidad);
 
-                    // Agregar el AntiHeroe al GestorPersonajes
+
 
                     gestorPersonajes.crearPersonaje(antiheroe);
 
-                    H_Form_A form = new H_Form_A(gestorPersonajes, antiheroe, nuevoActor); // Pasar el Actor
+                    H_Form_A form = new H_Form_A(gestorPersonajes, antiheroe, nuevoActor);
                     form.setVisible(true);
                     dispose();
                 } catch (Exception ex) {

@@ -36,7 +36,7 @@ public class H_Form_A extends JFrame {
         GUARDARButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Capturar papel
+
                 String titulo = txt_nombrepelicula.getText();
                 int anio = Integer.parseInt(txt_aino.getText());
                 String personaje = txt_personaje.getText();
@@ -47,21 +47,17 @@ public class H_Form_A extends JFrame {
                     return;
                 }
 
-                // Crear un nuevo objeto
                 Actor.Papel nuevoPapel = new Actor.Papel(titulo, anio, personaje);
 
-                // Agrega el papel al actor
                 antiheroe.getActor().getPeliculas().add(nuevoPapel);
 
-                // Limpiar campos del formulario
                 txt_nombrepelicula.setText("");
                 txt_aino.setText("");
                 txt_personaje.setText("");
 
-                // Guardar los datos
                 gestorPersonajes.guardarDatosTXT("antiheroes.txt");
 
-                F_list_A form = new F_list_A(gestorPersonajes);
+                D_List_A form = new D_List_A(gestorPersonajes);
                 form.setVisible(true);
                 dispose();
             }
@@ -70,28 +66,18 @@ public class H_Form_A extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                // Captura papel
-
                 String titulo = txt_nombrepelicula.getText();
                 int anio = Integer.parseInt(txt_aino.getText());
                 String personaje = txt_personaje.getText();
-
-                // Validar datos
 
                 if (titulo.isEmpty() || personaje.isEmpty()) {
                     JOptionPane.showMessageDialog(null, "Por favor, complete todos los campos.");
                     return;
                 }
 
-                // Crear un nuevo papel
-
                 Actor.Papel nuevoPapel = new Actor.Papel(titulo, anio, personaje);
 
-                // Agrega el papel al actor
-
                 antiheroe.getActor().getPeliculas().add(nuevoPapel);
-
-                // Limpia el formulario
 
                 txt_nombrepelicula.setText("");
                 txt_aino.setText("");

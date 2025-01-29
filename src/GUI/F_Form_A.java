@@ -57,15 +57,12 @@ public class F_Form_A extends JFrame {
 
                 Poder nuevoPoder = new Poder();
 
-                // Capturar datos del poder
                 String nombrePoder = txt_nombre.getText();
                 int nivel = Integer.parseInt((String) Objects.requireNonNull(combobox_Nivel.getSelectedItem()));
                 String tipoStr = (String) comobobox_Tipo.getSelectedItem();
                 String descripcion = txt_Decripcion.getText();
 
                 Poder.Tipo tipo = Poder.Tipo.valueOf(tipoStr);
-
-                // Validar datos
 
                 if (nombrePoder.isEmpty() || descripcion.isEmpty()) {
                     JOptionPane.showMessageDialog(null, "Por favor, complete todos los campos.");
@@ -77,11 +74,7 @@ public class F_Form_A extends JFrame {
                 nuevoPoder.setTipo(tipo);
                 nuevoPoder.setDescripcion(descripcion);
 
-                // Añadir poder
-
                 antiheroe.agregarPoder(nuevoPoder);
-
-                //Limpiar campos del Formulario
 
                 txt_nombre.setText("");
                 combobox_Nivel.setSelectedIndex(0);

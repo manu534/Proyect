@@ -11,8 +11,6 @@ import java.util.List;
 
 public class E_Form_A extends JFrame {
 
-    //Atributos
-
     private JTextField txtName_A;
     private JTextField txtFrase_A;
     private JTextField txt_Metodos_A;
@@ -37,7 +35,6 @@ public class E_Form_A extends JFrame {
             public void actionPerformed(ActionEvent e)
             {
                 try {
-                    // Capturar datos
 
                     String alias = Alias.getText();
                     String frase = txtFrase_A.getText();
@@ -46,20 +43,14 @@ public class E_Form_A extends JFrame {
                     List<String> metodosCuestionables = Arrays.asList(metodosStr.split(";"));
                     String nombreReal = txtName_A.getText();
 
-                    // Validar datos
-
                     if (alias.isEmpty() || frase.isEmpty() || metodosCuestionables.isEmpty() || nombreReal.isEmpty()) {
                         JOptionPane.showMessageDialog(null, "Por favor, complete todos los campos.");
                         return;
                     }
 
-                    // Crear AntiHeroe
-
                     AntiHeroe antiheroeTemp = new AntiHeroe(gestorPersonajes.generarId(),"",0,"",alias,nombreReal,edad,frase);
 
                     antiheroeTemp.setMetodosCuestionables(metodosCuestionables);
-
-                    //Siguiente ventana
 
                     F_Form_A form = new F_Form_A(gestorPersonajes, antiheroeTemp);
                     form.setVisible(true);
